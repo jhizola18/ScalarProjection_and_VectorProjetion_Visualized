@@ -12,7 +12,6 @@ Window::~Window() noexcept
 {
 	assert(!WindowShouldClose());
 	CloseWindow();
-	std::cout << " CLOSED WINDOW ";
 }
 
 bool Window::GameShouldClose()
