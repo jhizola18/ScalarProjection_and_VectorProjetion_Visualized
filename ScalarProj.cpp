@@ -52,6 +52,14 @@ void ScalarProjection::ScalarPorj_Implementation()
 	{
 		Vector2 vectorProj = { UnitVecA.x * ScalarProj, UnitVecA.y * ScalarProj };
 		DrawCircle(VecA.x + vectorProj.x,VecA.y + vectorProj.y, 20.0f, WHITE);
+
+		DrawText(TextFormat("X Coordinate Vector Projection: %f", vectorProj.x), 450, 120, 17, BLUE);
+		DrawText(TextFormat("Y Coordinate Vector Projection: %f", vectorProj.y), 450, 140, 17, RED);
+		DrawText(TextFormat("Press E to return to Main Menu: "), 100, 120, 17, WHITE);
+	}
+	else {
+		DrawText(TextFormat("Press E to return to Main Menu: "), 100, 120, 17, WHITE);
+		DrawText(TextFormat("Scalar Projection: %f", ScalarProj), 450, 120, 17, WHITE);
 	}
 	
 	
@@ -68,8 +76,7 @@ void ScalarProjection::ScalarPorj_Implementation()
 	//Scalar Projection Line Visualize
 	DrawLine(VecA.x, VecA.y, VecA.x + UnitVecA.x * ScalarProj, VecA.y + UnitVecA.y * ScalarProj, WHITE);
 	
-	std::cout << "Vector B Distance to the Direction of Unit Vector A: " << ScalarProj << "\n";
-
+	
 }
 
 void ScalarProjection::Menu()
